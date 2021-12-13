@@ -1,8 +1,12 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "[![Actions Status](https://github.com/farshmachine/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/farshmachine/backend-project-lvl1/actions)",
   "main": "index.js",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
