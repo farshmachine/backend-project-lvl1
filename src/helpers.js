@@ -13,3 +13,17 @@ export function getGCD(a, b) {
 
   return getGCD(b, a % b);
 }
+
+export function getProgression() {
+  const step = getRandomNumber(2, 5);
+  const start = getRandomNumber(1, 100);
+  const removedItem = getRandomNumber(0, 9);
+
+  return new Array(10).fill('').map((_el, index) => {
+    if (index === removedItem) {
+      return '..';
+    }
+
+    return start + index * step;
+  }).join(' ');
+}
