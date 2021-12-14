@@ -11,7 +11,7 @@ function getUsername() {
 export default function playGame(game) {
   const {
     showRules,
-    play,
+    getQuestion,
     getCorrectAnswer,
   } = game;
   let round = 1;
@@ -21,10 +21,10 @@ export default function playGame(game) {
   showRules();
 
   do {
-    const question = play();
+    const question = getQuestion();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSYnc.question('Answer: ');
-    const correctAnswer = getCorrectAnswer();
+    const correctAnswer = getCorrectAnswer(question);
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
@@ -33,6 +33,9 @@ export default function playGame(game) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${username}!`);
       round = 1;
+      return;
     }
   } while (round <= 3);
+
+  console.log(`Congratulations, ${username}!`);
 }
