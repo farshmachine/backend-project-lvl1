@@ -1,4 +1,5 @@
-import { getRandomNumber, isEven } from '../helpers';
+import playGame from '../index.js';
+import { getRandomNumber, isEven } from '../helpers.js';
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
@@ -15,8 +16,8 @@ function showRules() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 }
 
-export {
+export default () => playGame({
   showRules,
   getCorrectAnswer,
   getQuestion,
-};
+});

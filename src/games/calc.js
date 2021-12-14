@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../helpers.js';
+import playGame from '../index.js';
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
@@ -32,8 +33,8 @@ function showRules() {
   console.log('What is the result of the expression?');
 }
 
-export {
+export default () => playGame({
   showRules,
   getQuestion,
   getCorrectAnswer,
-};
+});

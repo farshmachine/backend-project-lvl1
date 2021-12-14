@@ -5,3 +5,11 @@ export function isEven(number) {
 export function getRandomNumber(start, end) {
   return Math.floor(Math.random() * (end - start + 1)) + start;
 }
+
+export function getGCD(a, b) {
+  if (b === 0 || a === b) {
+    return a;
+  }
+
+  return getGCD(b, a % b);
+}
