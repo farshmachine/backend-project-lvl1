@@ -27,3 +27,15 @@ export function getProgression() {
     return start + index * step;
   }).join(' ');
 }
+
+export function isPrime(number) {
+  const counter = number / 2;
+
+  for (let i = 2; i <= counter; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}

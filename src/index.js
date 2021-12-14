@@ -22,6 +22,7 @@ export default function playGame(game) {
 
   do {
     const question = getQuestion();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSYnc.question('Answer: ');
     const correctAnswer = getCorrectAnswer(question);
 
