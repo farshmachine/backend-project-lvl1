@@ -1,13 +1,6 @@
 import readlineSYnc from 'readline-sync';
 import showGreeting from './cli.js';
 
-function getUsername() {
-  const username = readlineSYnc.question('May I have you name? ');
-  console.log(`Hello, ${username}!`);
-
-  return username;
-}
-
 export default function playGame(game) {
   const {
     showRules,
@@ -16,8 +9,7 @@ export default function playGame(game) {
   } = game;
   let round = 1;
 
-  showGreeting();
-  const username = getUsername();
+  const username = showGreeting();
   showRules();
 
   do {
