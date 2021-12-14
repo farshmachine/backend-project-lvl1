@@ -19,11 +19,11 @@ function getCorrectAnswer(question) {
   const secondNumber = Number(b);
 
   if (action === '+') {
-    return firstNumber + secondNumber;
+    return String(firstNumber + secondNumber);
   }
 
   if (action === '-') {
-    return firstNumber - secondNumber;
+    return String(firstNumber - secondNumber);
   }
 
   return String(firstNumber * secondNumber);
