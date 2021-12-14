@@ -2,7 +2,7 @@ import readlineSYnc from 'readline-sync';
 import showGreeting from './cli.js';
 
 function getUsername() {
-  const username = readlineSYnc.question('May i have you name? ');
+  const username = readlineSYnc.question('May I have you name? ');
   console.log(`Hello, ${username}!`);
 
   return username;
