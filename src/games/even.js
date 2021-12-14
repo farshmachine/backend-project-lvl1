@@ -44,8 +44,7 @@ export function play(username) {
       round += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getCorrectAnswer(number)}'.`);
-      console.log(`Let's try again ${username}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getCorrectAnswer(number)}'.\nLet's try again ${username}`);
       round = 1;
       return;
     }
